@@ -31,8 +31,6 @@ function redirect($url){
 }
 
 function check_url(){
-    $url = $_SERVER['REDIRECT_URL'];
+    $url = $_SERVER['REQUEST_URI'];
    return substr($url, strlen('/php-mvc'));
 }
-
-dd(check_url());

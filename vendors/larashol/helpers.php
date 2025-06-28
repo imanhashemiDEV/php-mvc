@@ -34,3 +34,8 @@ function check_url(){
     $url = $_SERVER['REQUEST_URI'];
    return substr($url, strlen('/php-mvc'));
 }
+
+function view($path ,$data=[]){
+   extract($data);
+   require_once(base_path('resources/views/'. $path));
+}
